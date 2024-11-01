@@ -10,8 +10,15 @@ throw new Error('Failed to fetch tickets. Status: ' + response.status);}
 const data = await response.json();
 // Waiting to see if response shows that everything is ok. 
 if (data.length === 0) {
-throw new Error('No unresolved tickets available.');}
+throw new Error('No tickets available.');}
 // Code meant to check if they are tickets are available 
 
-
-}};
+displayTickets(data);
+} catch (error) {
+errorMessage.innerText = error.message;
+errorMessage.style.display = 'block'; 
+// Code meant to display the error message if an error was found.
+} finally {
+// Finally used to cleanup the code.
+console.log('Fetch complete.'); }}
+// Code meant to display message when fetch is complete and successful.
