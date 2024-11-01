@@ -35,4 +35,5 @@ ticketDiv.innerHTML = `
 ticketContainer.appendChild(ticketDiv);});}
 // Code meant to display tickets and ticket details. 
 fetchTickets();
-// Code
+// Finalizing code. 
+// Challenge is now complete.
