@@ -6,7 +6,7 @@ const errorMessage = document.getElementById('error-message');
 try {
 let response = await fetch(apiURL);
 if (!response.ok) {
-throw new Error('Failed to fetch tickets. Status: ' + response.status);}
+throw new Error('Failed to fetch tickets. Current status: ' + response.status);}
 const data = await response.json();
 // Waiting to see if response shows that everything is ok. 
 if (data.length === 0) {
@@ -36,4 +36,4 @@ ticketContainer.appendChild(ticketDiv);});}
 // Code meant to display tickets and ticket details. 
 fetchTickets();
 // Finalizing code. 
-// Challenge is now complete.
+// Challenge is now complete and tested. 
