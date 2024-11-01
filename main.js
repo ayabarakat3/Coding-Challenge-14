@@ -22,3 +22,17 @@ errorMessage.style.display = 'block';
 // Finally used to cleanup the code.
 console.log('Fetch complete.'); }}
 // Code meant to display message when fetch is complete and successful.
+function displayTickets(tickets) {
+const ticketContainer = document.getElementById('ticket-container');
+tickets.forEach(ticket => {
+const ticketDiv = document.createElement('div');
+ticketDiv.innerHTML = `
+<h3>Ticket ID: ${ticket.id}</h3>
+<p>Customer Name (User ID): ${ticket.userId}</p>
+<p>Issue Description: ${ticket.title}</p>
+<p>Details: ${ticket.body}</p>
+<hr>`;
+ticketContainer.appendChild(ticketDiv);});}
+// Code meant to display tickets and ticket details. 
+fetchTickets();
+// Code
